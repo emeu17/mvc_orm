@@ -2,6 +2,7 @@
 
 namespace Emeu17\Book;
 
+
 class Book
 {
     /**

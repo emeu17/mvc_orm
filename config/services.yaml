@@ -21,6 +21,7 @@ services:
             - '../src/Kernel.php'
             - '../src/Tests/'
             - '../src/Dice'
+            - '../src/Book'
 
     Emeu17\:
         resource: '../src/'

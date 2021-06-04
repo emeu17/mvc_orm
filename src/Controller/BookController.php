@@ -2,7 +2,11 @@
 
 namespace App\Controller;
 
+
+// use Doctrine\ORM\EntityManagerInterface;
 use Emeu17\Book\Book;
+// use Doctrine\ORM\EntityManager;
+// use App\Entity\Book;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,7 +20,33 @@ class BookController extends AbstractController
     */
     public function bookView(): Response
     {
-        return $this->render('books.html.twig');
+        require_once __DIR__ . "/../../bin/bootstrap.php";
+        $bookRepository = $entityManager->getRepository('\Emeu17\Book\Book');
+        $books = $bookRepository->findAll();
+
+        // you can fetch the EntityManager via $this->getDoctrine()
+        // or you can add an argument to your action: createAction(EntityManagerInterface $entityManager)
+        // $entityManager = $this->getDoctrine()->getManager();
+
+        // $bookRepository = $this->getDoctrine()->getRepository(Book::class);
+        // $books = $bookRepository->findAll();
+
+        // if ($books) {
+        //     foreach ($books as $book) {
+        //         echo sprintf("%2d - %s, %s, (%d), %s\n",
+        //             $book->getId(),
+        //             $book->getTitle(),
+        //             $book->getAuthor(),
+        //             $book->getIsbn(),
+        //             $book->getPic()
+        //         );
+        //     }
+        // } else {
+        //     echo " (empty)\n";
+        // }
+        return $this->render('books.html.twig', [
+            'books' => $books,
+        ]);
     }
     //
     // /**
