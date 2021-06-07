@@ -147,15 +147,15 @@ class Game21Controller extends AbstractController
     * Compare two values in array of objects.
     * Sort desc (playerScore)
     */
-    private function cmp($a, $b)
+    public function cmp($value1, $value2)
     {
-        return $a->getPlayerScore() < $b->getPlayerScore();
+        return $value1->getPlayerScore() < $value2->getPlayerScore();
     }
 
     /**
      * @Route("/diceGame/highScore", name="score")
     */
-    public function diceHighScore(SessionInterface $session): Response
+    public function diceHighScore(): Response
     {
         require_once __DIR__ . "/../../bin/bootstrap.php";
         $scoreRepository = $entityManager->getRepository('\Emeu17\Highscore\Highscore');
@@ -171,7 +171,7 @@ class Game21Controller extends AbstractController
     /**
      * @Route("/diceGame/diceSaveScore", name="diceSaveScore")
     */
-    public function diceSaveScore(SessionInterface $session): Response
+    public function diceSaveScore(): Response
     {
         return $this->render('diceSaveScore.html.twig');
     }

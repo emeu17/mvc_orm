@@ -2,8 +2,8 @@
 
 require_once __DIR__ . "/bootstrap.php";
 
-function cmp($a, $b) {
-    return $a->cmp < $b->cmp;
+function cmp($value1, $value2) {
+    return $value1->cmp < $value2->cmp;
 }
 
 $scoreRepository = $entityManager->getRepository('\Emeu17\Highscore\Highscore');

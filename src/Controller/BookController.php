@@ -24,54 +24,8 @@ class BookController extends AbstractController
         $bookRepository = $entityManager->getRepository('\Emeu17\Book\Book');
         $books = $bookRepository->findAll();
 
-        // you can fetch the EntityManager via $this->getDoctrine()
-        // or you can add an argument to your action: createAction(EntityManagerInterface $entityManager)
-        // $entityManager = $this->getDoctrine()->getManager();
-
-        // $bookRepository = $this->getDoctrine()->getRepository(Book::class);
-        // $books = $bookRepository->findAll();
-
-        // if ($books) {
-        //     foreach ($books as $book) {
-        //         echo sprintf("%2d - %s, %s, (%d), %s\n",
-        //             $book->getId(),
-        //             $book->getTitle(),
-        //             $book->getAuthor(),
-        //             $book->getIsbn(),
-        //             $book->getPic()
-        //         );
-        //     }
-        // } else {
-        //     echo " (empty)\n";
-        // }
         return $this->render('books.html.twig', [
             'books' => $books,
         ]);
     }
-    //
-    // /**
-    //  * @Route("/dice_view", name="dice_view")
-    // */
-    // public function diceView(SessionInterface $session): Response
-    // {
-    //
-    //     // $die = new Dice();
-    //     $dicehand = new DiceHand();
-    //     $graphdice = new GraphicalDice();
-    //     $graphrolls = 6;
-    //     $graphres = [];
-    //     $graphclass = [];
-    //     for ($i = 0; $i < $graphrolls; $i++) {
-    //         $graphres[] = $graphdice->roll();
-    //         $graphclass[] = $graphdice->asString();
-    //     }
-    //
-    //     return $this->render('dice.html.twig', [
-    //         // 'die' => $die,
-    //         'dicehand' => $dicehand,
-    //         'graphres' => $graphres,
-    //         'graphclass' => $graphclass,
-    //         'session' => $session,
-    //     ]);
-    // }
 }

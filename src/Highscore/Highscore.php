@@ -8,7 +8,7 @@ class Highscore
     /**
      * @var int
      */
-    protected $id_score;
+    protected $idScore;
 
     /**
      * @var string
@@ -28,7 +28,7 @@ class Highscore
 
     public function getId()
     {
-        return $this->id_score;
+        return $this->idScore;
     }
 
     public function getName()

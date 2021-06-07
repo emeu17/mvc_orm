@@ -8,7 +8,7 @@ class Book
     /**
      * @var int
      */
-    protected $id;
+    protected $idBook;
 
     /**
      * @var string
@@ -32,7 +32,7 @@ class Book
 
     public function getId()
     {
-        return $this->id;
+        return $this->idBook;
     }
 
     public function getTitle()
