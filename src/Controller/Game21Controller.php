@@ -149,7 +149,7 @@ class Game21Controller extends AbstractController
     */
     public function cmp($value1, $value2)
     {
-        return $value1->getPlayerScore() < $value2->getPlayerScore();
+        return $value1->comp < $value2->comp;
     }
 
     /**
@@ -160,6 +160,11 @@ class Game21Controller extends AbstractController
         require_once __DIR__ . "/../../bin/bootstrap.php";
         $scoreRepository = $entityManager->getRepository('\Emeu17\Highscore\Highscore');
         $scores = $scoreRepository->findAll();
+
+        //add comparison between no of rounds won player vs computer
+        foreach ($scores as $score) {
+                $score->comp = $score->getPlayerScore() / $score->getComputerScore(); //this is the only new data
+        }
 
         usort($scores, array($this, "cmp"));
 
