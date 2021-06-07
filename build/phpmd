@@ -1,3 +1,5 @@
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Book\Book.php:10	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Book\Book.php:11	Avoid variables with short names like $id. Configured minimum length is 3.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:24	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:24	Avoid unused local variables such as '$entityManager'.
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').

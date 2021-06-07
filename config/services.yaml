@@ -22,6 +22,7 @@ services:
             - '../src/Tests/'
             - '../src/Dice'
             - '../src/Book'
+            - '../src/Highscore'
 
     Emeu17\:
         resource: '../src/'

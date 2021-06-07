@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1622738498">
-  <project timestamp="1622738498">
+<coverage generated="1622855946">
+  <project timestamp="1622855946">
     <file name="C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\config\bundles.php">
       <line num="4" type="stmt" count="0"/>
       <metrics loc="15" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="1" coveredelements="0"/>
@@ -19,32 +19,41 @@
       <class name="Emeu17\Book\Book" namespace="global">
         <metrics complexity="9" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="22" coveredelements="0"/>
       </class>
-      <line num="32" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="37" type="method" name="getTitle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="39" type="stmt" count="0"/>
-      <line num="42" type="method" name="setTitle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="44" type="stmt" count="0"/>
+      <line num="33" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="38" type="method" name="getTitle" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="43" type="method" name="setTitle" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="45" type="stmt" count="0"/>
-      <line num="47" type="method" name="getAuthor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="49" type="stmt" count="0"/>
-      <line num="52" type="method" name="setAuthor" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="54" type="stmt" count="0"/>
+      <line num="46" type="stmt" count="0"/>
+      <line num="48" type="method" name="getAuthor" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="50" type="stmt" count="0"/>
+      <line num="53" type="method" name="setAuthor" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="55" type="stmt" count="0"/>
-      <line num="57" type="method" name="getIsbn" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="59" type="stmt" count="0"/>
-      <line num="62" type="method" name="setIsbn" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="64" type="stmt" count="0"/>
+      <line num="56" type="stmt" count="0"/>
+      <line num="58" type="method" name="getIsbn" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="60" type="stmt" count="0"/>
+      <line num="63" type="method" name="setIsbn" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="65" type="stmt" count="0"/>
-      <line num="67" type="method" name="getPic" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="69" type="stmt" count="0"/>
-      <line num="72" type="method" name="setPic" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="74" type="stmt" count="0"/>
+      <line num="66" type="stmt" count="0"/>
+      <line num="68" type="method" name="getPic" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="70" type="stmt" count="0"/>
+      <line num="73" type="method" name="setPic" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="75" type="stmt" count="0"/>
-      <metrics loc="76" ncloc="61" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="22" coveredelements="0"/>
+      <line num="76" type="stmt" count="0"/>
+      <metrics loc="77" ncloc="62" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="22" coveredelements="0"/>
     </file>
     <file name="C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php">
-      <metrics loc="0" ncloc="0" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <class name="App\Controller\BookController" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+      </class>
+      <line num="21" type="method" name="bookView" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="24" type="stmt" count="0"/>
+      <line num="25" type="stmt" count="0"/>
+      <line num="47" type="stmt" count="0"/>
+      <line num="48" type="stmt" count="0"/>
+      <metrics loc="77" ncloc="45" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
     </file>
     <file name="C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php">
       <class name="App\Controller\Game21Controller" namespace="global">
@@ -263,6 +272,6 @@
       <line num="37" type="stmt" count="0"/>
       <metrics loc="38" ncloc="38" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="17" coveredelements="0"/>
     </file>
-    <metrics files="14" loc="670" ncloc="519" classes="9" methods="41" coveredmethods="19" conditionals="0" coveredconditionals="0" statements="152" coveredstatements="49" elements="193" coveredelements="68"/>
+    <metrics files="14" loc="748" ncloc="565" classes="10" methods="42" coveredmethods="19" conditionals="0" coveredconditionals="0" statements="157" coveredstatements="49" elements="199" coveredelements="68"/>
   </project>
 </coverage>

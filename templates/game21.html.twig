@@ -10,6 +10,7 @@
         <p>Player score: {{ session.get('playScore')}} </p>
         <p>Computer score: {{ session.get('compScore')}} </p>
         <p><a href="{{ path('resetGame') }}">Reset scoreboard</a></p>
+        <p><a href="{{ path('diceSaveScore') }}">Save to Highscore</a></p>
     </div>
 
     <form method="post" action="{{ path('processGame') }}">

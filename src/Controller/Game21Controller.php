@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Emeu17\Dice\DiceHand;
+use Emeu17\Highscore\Highscore;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -140,5 +141,67 @@ class Game21Controller extends AbstractController
         // $winner = "player";
         $session->set('playScore', 1 + $session->get('playScore'));
         return $res;
+    }
+
+    /**
+    * Compare two values in array of objects.
+    * Sort desc (playerScore)
+    */
+    private function cmp($a, $b)
+    {
+        return $a->getPlayerScore() < $b->getPlayerScore();
+    }
+
+    /**
+     * @Route("/diceGame/highScore", name="score")
+    */
+    public function diceHighScore(SessionInterface $session): Response
+    {
+        require_once __DIR__ . "/../../bin/bootstrap.php";
+        $scoreRepository = $entityManager->getRepository('\Emeu17\Highscore\Highscore');
+        $scores = $scoreRepository->findAll();
+
+        usort($scores, array($this, "cmp"));
+
+        return $this->render('diceHighScore.html.twig', [
+            'scores' => $scores,
+        ]);
+    }
+
+    /**
+     * @Route("/diceGame/diceSaveScore", name="diceSaveScore")
+    */
+    public function diceSaveScore(SessionInterface $session): Response
+    {
+        return $this->render('diceSaveScore.html.twig');
+    }
+
+
+    /**
+     * @Route("/diceGame/saveScore", name="saveScore")
+    */
+    public function saveScore(SessionInterface $session, Request $request): RedirectResponse
+    {
+        require_once __DIR__ . "/../../bin/bootstrap.php";
+        $newScoreName = $request->request->get('playerName') ?? "unknown";
+        $newScorePlayer = $session->get('playScore');
+        $newScoreComputer = $session->get('compScore');
+
+        $highscore = new Highscore();
+        $highscore->setName($newScoreName);
+        $highscore->setPlayerScore($newScorePlayer);
+        $highscore->setComputerScore($newScoreComputer);
+
+        $entityManager->persist($highscore);
+        $entityManager->flush();
+
+        $session->clear();
+        return $this->redirectToRoute('score');
+
+        // return $this->render('test3.html.twig', [
+        //     'name' => $newScoreName,
+        //     'player' => $newScorePlayer,
+        //     'computer' => $newScoreComputer,
+        // ]);
     }
 }
