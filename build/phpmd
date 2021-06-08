@@ -1,8 +1,7 @@
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:22	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:22	Avoid unused local variables such as '$entityManager'.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:161	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:161	Avoid unused local variables such as '$entityManager'.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:200	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:201	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\migrations\Version20210608134527.php:20	Avoid using short method names like Version20210608134527::up(). The configured minimum method name length is 3.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\migrations\Version20210608134527.php:20	Avoid using short method names like Version20210608134527::up(). The configured minimum method name length is 3.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\migrations\Version20210608134527.php:20	Avoid unused parameters such as '$schema'.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\migrations\Version20210608134527.php:27	Avoid unused parameters such as '$schema'.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Entity\Book.php:18	Avoid variables with short names like $id. Configured minimum length is 3.
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').

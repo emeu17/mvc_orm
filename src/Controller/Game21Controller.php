@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Emeu17\Dice\DiceHand;
-use Emeu17\Highscore\Highscore;
+use Emeu17\Entity\Highscore;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Doctrine\ORM\EntityManagerInterface;
 
 class Game21Controller extends AbstractController
 {
@@ -157,9 +158,9 @@ class Game21Controller extends AbstractController
     */
     public function diceHighScore(): Response
     {
-        require_once __DIR__ . "/../../bin/bootstrap.php";
-        $scoreRepository = $entityManager->getRepository('\Emeu17\Highscore\Highscore');
-        $scores = $scoreRepository->findAll();
+        $scores = $this->getDoctrine()
+            ->getRepository(Highscore::class)
+            ->findAll();
 
         //add comparison between no of rounds won player vs computer
         foreach ($scores as $score) {
@@ -187,7 +188,7 @@ class Game21Controller extends AbstractController
     */
     public function saveScore(SessionInterface $session, Request $request): RedirectResponse
     {
-        require_once __DIR__ . "/../../bin/bootstrap.php";
+        $entityManager = $this->getDoctrine()->getManager();
         $newScoreName = $request->request->get('playerName') ?? "unknown";
         $newScorePlayer = $session->get('playScore');
         $newScoreComputer = $session->get('compScore');
@@ -202,11 +203,34 @@ class Game21Controller extends AbstractController
 
         $session->clear();
         return $this->redirectToRoute('score');
-
-        // return $this->render('test3.html.twig', [
-        //     'name' => $newScoreName,
-        //     'player' => $newScorePlayer,
-        //     'computer' => $newScoreComputer,
-        // ]);
     }
+
+    /**
+     * @Route("/create_score", name="create_score")
+     */
+    public function createScore(): Response
+    {
+        // you can fetch the EntityManager via $this->getDoctrine()
+        // or you can add an argument to the action: createProduct(EntityManagerInterface $entityManager)
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $score = new Highscore();
+
+        $score->setName('Emma');
+        $score->setPlayerScore(3);
+        $score->setComputerScore(1);
+
+        // $score->setName('Testsson');
+        // $score->setPlayerScore(2);
+        // $score->setComputerScore(2);
+
+        // tell Doctrine you want to (eventually) save the Product (no queries yet)
+        $entityManager->persist($score);
+
+        // actually executes the queries (i.e. the INSERT query)
+        $entityManager->flush();
+
+        return new Response('Saved new score with id '.$score->getId());
+    }
+
 }
