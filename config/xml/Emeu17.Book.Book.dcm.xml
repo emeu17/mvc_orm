@@ -12,7 +12,7 @@
 
           <field name="author" type="string" />
 
-          <field name="isbn" type="integer" />
+          <field name="isbn" type="string" />
 
           <field name="pic" type="string" />
       </entity>

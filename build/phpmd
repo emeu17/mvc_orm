@@ -1,8 +1,8 @@
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:24	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:24	Avoid unused local variables such as '$entityManager'.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:22	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\BookController.php:22	Avoid unused local variables such as '$entityManager'.
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:161	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:161	Avoid unused local variables such as '$entityManager'.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:195	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
-C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:196	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:200	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Controller\Game21Controller.php:201	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
 C:\Users\emma8\Documents\BTH\dbwebb-kurser\mvc\me\orm\src\Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').

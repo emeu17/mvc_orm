@@ -15,7 +15,7 @@
             <th>Rating player/computer</th>
         </tr>
 
-    {% for score in scores %}
+    {% for score in scores[:5] %}
         <tr>
             <td> {{ score.getId() }} </td>
             <td> {{ score.getName() }} </td>

@@ -7,18 +7,7 @@
     <p>You may <a href="session/destroy">destroy the session</a> if you like, good for dealing
     with trouble.</p>
 
+    <p>Session information is only shown in dev mode </p>
 
-    {% for key, sname in session.all() %}
-        <p> {{ key }} , {{ dump(sname) }} </p>
-    {% endfor %}
-
-
-
-
-    {% if session.get('counter') is null %}
-        {{ session.set('counter', 1) }}
-    {% else %}
-        {{ session.set('counter', 1 + session.get('counter')) }}
-    {% endif %}
 
 {% endblock %}

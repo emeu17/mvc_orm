@@ -106,6 +106,12 @@
     "nikic/php-parser": {
         "version": "v4.10.5"
     },
+    "paragonie/random_compat": {
+        "version": "v9.99.100"
+    },
+    "paragonie/sodium_compat": {
+        "version": "v1.16.1"
+    },
     "phar-io/manifest": {
         "version": "2.0.1"
     },

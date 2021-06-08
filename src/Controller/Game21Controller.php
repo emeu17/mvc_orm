@@ -163,7 +163,7 @@ class Game21Controller extends AbstractController
 
         //add comparison between no of rounds won player vs computer
         foreach ($scores as $score) {
-                $score->comp = $score->getPlayerScore() / $score->getComputerScore(); //this is the only new data
+                $score->comp = ($score->getComputerScore() != 0) ? $score->getPlayerScore() / $score->getComputerScore() :  $score->getPlayerScore() / 1;
         }
 
         usort($scores, array($this, "cmp"));

@@ -21,7 +21,7 @@
             <td> {{ book.getTitle() }} </td>
             <td> {{ book.getAuthor() }} </td>
             <td> {{ book.getIsbn() }} </td>
-            <td> {{ book.getPic() }} </td>
+            <td> <a href="{{ book.getPic() }}">Click here for picture</a> </td>
         </tr>
     {% endfor %}
     </table>

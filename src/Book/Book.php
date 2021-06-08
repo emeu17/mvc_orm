@@ -21,7 +21,7 @@ class Book
     protected $author;
 
     /**
-     * @var int§
+     * @var string
      */
     protected $isbn;
 
