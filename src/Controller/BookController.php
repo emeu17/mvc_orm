@@ -24,10 +24,11 @@ class BookController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         $book = new Book();
-        $book->setTitle('Coding with JavaScript For Dummies');
-        $book->setAuthor('Chris Minnick');
-        $book->setIsbn('978-1-119-05606-5');
-        $book->setPic('https://media.wiley.com/product_data/coverImage300/71/11190560/1119056071.jpg');
+
+        // $book->setTitle('Coding with JavaScript For Dummies');
+        // $book->setAuthor('Chris Minnick');
+        // $book->setIsbn('978-1-119-05606-5');
+        // $book->setPic('https://media.wiley.com/product_data/coverImage300/71/11190560/1119056071.jpg');
 
         // $book->setTitle('PHP & MYSQL For Dummies');
         // $book->setAuthor('Janet Valade');

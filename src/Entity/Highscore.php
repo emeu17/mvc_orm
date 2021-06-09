@@ -15,61 +15,56 @@ use Doctrine\ORM\Mapping as ORM;
         * @ORM\GeneratedValue
         * @ORM\Column(type="integer")
         */
-       private $idScore;
-   
+       private $id_score;
+
        /**
         * @ORM\Column(type="string", length=50)
         */
        protected $name;
-   
+
        /**
         * @ORM\Column(type="integer")
         */
        protected $playerScore;
-   
+
        /**
         * @ORM\Column(type="integer")
         */
        protected $computerScore;
-   
-   
+
+
        public function getId()
        {
-           return $this->idScore;
+           return $this->id_score;
        }
-   
+
        public function getName()
        {
            return $this->name;
        }
-   
+
        public function setName($name)
        {
            $this->name = $name;
        }
-   
+
        public function getPlayerScore()
        {
            return $this->playerScore;
        }
-   
+
        public function setPlayerScore($playerScore)
        {
            $this->playerScore = $playerScore;
        }
-   
+
        public function getComputerScore()
        {
            return $this->computerScore;
        }
-   
+
        public function setComputerScore($computerScore)
        {
            $this->computerScore = $computerScore;
-       }
-
-       public function getIdScore(): ?int
-       {
-           return $this->idScore;
        }
    }
